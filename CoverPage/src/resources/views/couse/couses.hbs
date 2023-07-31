@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Courses</h1>
+  <ul class="list-group">
+    {{#each couses}}
+      <li class="list-group-item">
+        <a href="/couses/{{this.slug}}" class="d-flex align-items-center">
+          <img src="{{this.img}}" alt="{{this.name}}" class="mr-3" style="width: 100px; height: auto;">
+          {{this.name}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

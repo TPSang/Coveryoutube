@@ -1,0 +1,16 @@
+<!-- views/couse/couseDetail.hbs -->
+<div class="container">
+  <div class="jumbotron">
+    <h1>{{couse.name}}</h1>
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item"
+        src="https://www.youtube.com/embed/{{couse.videoID}}"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p>Description: {{couse.description}}</p>
+  </div>
+</div>

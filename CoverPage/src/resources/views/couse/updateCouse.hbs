@@ -1,0 +1,22 @@
+<!-- views/couse/editCouse.hbs -->
+<div class="container">
+  <h1>Edit Course</h1>
+  <form action="/couses/{{couse.slug}}/edit" method="post">
+    <!-- Trường ẩn để gửi phương thức PUT -->
+    <input type="hidden" name="_method" value="PUT">
+    <!-- Các trường dữ liệu khác của form -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="{{couse.name}}" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" class="form-control" required>{{couse.description}}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="videoID">Video ID:</label>
+      <input type="text" name="videoID" id="videoID" value="{{couse.videoID}}" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>

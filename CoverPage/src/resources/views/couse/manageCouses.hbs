@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>List of Courses</h1>
+  <div class="row">
+    {{#each couses}}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{{img}}" alt="{{name}}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <div class="form-inline"> <!-- Thêm class "form-inline" vào đây -->
+              <a href="/couses/{{slug}}" class="btn btn-primary">View</a>
+              <a href="/couses/{{slug}}/edit" class="btn btn-secondary">Edit</a>
+              <!-- Sửa đổi phương thức từ "POST" thành "DELETE" -->
+              <form action="/couses/{{slug}}/delete" method="post" onsubmit="return confirm('Are you sure you want to delete this course?')">
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <a href="/couses/create" class="btn btn-success mt-4">Add New Course</a>
+</div>

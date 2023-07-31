@@ -1,0 +1,31 @@
+{
+  "name": "coveryoutube",
+  "version": "1.0.0",
+  "description": "this is web cover youtube",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass  src/resources/scss/app.scss -w src/public/css/app.css",
+    "start": "nodemon src/index.js"
+  },
+  "author": "sangtp",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.0",
+    "handlebars": "^4.7.7",
+    "mongoose": "^7.4.1",
+    "mongoose-slug-generator": "^1.0.4",
+    "mongoose-slug-updater": "^3.3.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "method-override": "^3.0.0",
+    "mongodb": "^5.7.0",
+    "node-sass": "^9.0.0",
+    "sass": "^1.64.1"
+  }
+  
+}
